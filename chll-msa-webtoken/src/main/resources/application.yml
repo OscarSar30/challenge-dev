@@ -1,0 +1,28 @@
+spring:
+  application:
+    name: chll-msa-webtoken
+  r2dbc:
+    password: 123
+    url: r2dbc:postgresql://localhost:5432/postgres
+    username: postgres
+    driverClassName: org.postgresql.Driver
+    initialization-mode: always
+  webflux:
+    cors:
+      allowed-origins: "http://localhost:4200"
+
+server:
+  port: 8099
+
+logging:
+  level:
+    org:
+      springframework:
+        data:
+          r2dbc: DEBUG
+        r2dbc: DEBUG
+
+    io:
+      r2dbc:
+        spi: DEBUG
+

@@ -1,0 +1,16 @@
+<table>
+  <tr>
+    <th>Token</th>
+    <th>Generation Date</th>
+    <th>Identification</th>
+    <th>FullName</th>
+    <th>Usage</th>
+  </tr>
+  <tr *ngFor="let token of tokens">
+    <td>{{ token.token }}</td>
+    <td>{{ token.generationDate }}</td>
+    <td>{{ token.user.identification }}</td>
+    <td>{{ token.user.fullName }}</td>
+    <td>{{ token.isUsed ? 'Used' : 'Not Used' }}</td>
+  </tr>
+</table>

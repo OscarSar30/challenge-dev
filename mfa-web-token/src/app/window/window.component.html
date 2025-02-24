@@ -1,0 +1,6 @@
+<div class="modal">
+    <h1>Token: {{ token }}</h1>
+    <p>Token Lifetime: {{ tokenLifetime }} seconds</p>
+    <button (click)="useToken()" [disabled]="tokenLifetime === 0">Do you want to use the token?</button>
+</div>
+  
